@@ -14,11 +14,27 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3001](http://localhost:3001) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `app/(public)/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Routes
+
+- **Public (website)** — uses `src/app/(public)/layout.tsx`:
+  - `/` Home
+  - `/about` About
+  - `/pricing` Pricing
+  - `/contact` Contact
+  - `/terms-and-conditions` Terms and Conditions
+  - `/privicy-policy` Privacy Policy (requested path). Also accessible via `/privacy-policy` which redirects to this.
+
+- **Protected (hub)** — uses `src/app/hub/layout.tsx`:
+  - `/hub/dashboard`
+  - `/hub/sign-in`
+  - `/hub/sign-up`
+  - `/hub/profile`
 
 ## Learn More
 
@@ -34,3 +50,20 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Stack
+
+- **Next.js**: 15.x
+- **React**: 19.x
+- **TypeScript**: 5.x
+- **Tailwind CSS**: 4.x
+- **Headless UI**: 2.2.7
+- **Heroicons**: 2.2.0
+
+## Notes
+
+- **UI Libraries**: Installed `@headlessui/react` and `@heroicons/react` to complement Tailwind CSS for accessible components and icons.
+
+---
+
+Last updated: 2025-08-14
