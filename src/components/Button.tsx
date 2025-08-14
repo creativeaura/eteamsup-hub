@@ -12,9 +12,9 @@ const variantStyles = {
   solid: {
     slate:
       'bg-slate-900 text-white hover:bg-slate-700 hover:text-slate-100 active:bg-slate-800 active:text-slate-300 focus-visible:outline-slate-900',
-    blue: 'bg-blue-600 text-white hover:text-slate-100 hover:bg-blue-500 active:bg-blue-800 active:text-blue-100 focus-visible:outline-blue-600',
+    blue: 'bg-eteamup-green text-white hover:text-slate-100 hover:bg-eteamup-green active:bg-eteamup-green active:text-blue-100 focus-visible:outline-blue-600',
     white:
-      'bg-white text-slate-900 hover:bg-blue-50 active:bg-blue-200 active:text-slate-600 focus-visible:outline-white',
+      'bg-white text-slate-900 hover:bg-eteamup-green active:bg-eteamup-green active:text-slate-600 focus-visible:outline-white',
   },
   outline: {
     slate:
@@ -26,19 +26,19 @@ const variantStyles = {
 
 type ButtonProps = (
   | {
-      variant?: 'solid'
-      color?: keyof typeof variantStyles.solid
-    }
+    variant?: 'solid'
+    color?: keyof typeof variantStyles.solid
+  }
   | {
-      variant: 'outline'
-      color?: keyof typeof variantStyles.outline
-    }
+    variant: 'outline'
+    color?: keyof typeof variantStyles.outline
+  }
 ) &
   (
     | Omit<React.ComponentPropsWithoutRef<typeof Link>, 'color'>
     | (Omit<React.ComponentPropsWithoutRef<'button'>, 'color'> & {
-        href?: undefined
-      })
+      href?: undefined
+    })
   )
 
 export function Button({ className, ...props }: ButtonProps) {

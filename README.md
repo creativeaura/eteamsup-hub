@@ -64,6 +64,16 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 - **UI Libraries**: Installed `@headlessui/react` and `@heroicons/react` to complement Tailwind CSS for accessible components and icons.
 
+### Brand color
+
+- **name**: `eteamup-green`
+- **hex**: `#8cbe00`
+- **usage**:
+  - `text-eteamup-green`
+  - `bg-eteamup-green`
+  - `border-eteamup-green`
+  - `ring-eteamup-green`
+
 ---
 
 Last updated: 2025-08-14
